@@ -43,9 +43,6 @@ class PaymentService(metaclass=abc.ABCMeta):
     Интерфейс апи платежной системы
     """
 
-    def make_request(self):
-        pass
-
     @abc.abstractmethod
     def deposit(self, data: Deposit) -> DepositResponse:
         """

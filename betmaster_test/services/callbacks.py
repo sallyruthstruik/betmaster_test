@@ -5,10 +5,6 @@ from betmaster_test.exceptions import BetmasterError
 from betmaster_test.models import TransactionStatus, Wallet, TransactionTypes
 
 
-class RetryCallback(BetmasterError):
-    pass
-
-
 class Callbacks:
 
     def success(self, tr: models.Transaction):
