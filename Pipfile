@@ -4,8 +4,15 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pytest = "*"
+pytest-django = "*"
+factory-boy = "*"
+pytest-cov = "*"
 
 [packages]
+requests = "*"
+psycopg2-binary = "*"
+django = "*"
 
 [requires]
-python_version = "2.7"
+python_version = "3.7"

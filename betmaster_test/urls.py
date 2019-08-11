@@ -16,6 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from betmaster_test import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^api/callbacks/success/(?P<hash>\w+)$', view=views.redirect_success_callback, name="redirect_success_callback"),
+    url(r'^api/callbacks/failure/(?P<hash>\w+)$', view=views.redirect_failure_callback, name="redirect_failure_callback"),
+
+    url(r'^api/deposit/(?P<transaction_id>\d+)$', view=views.get_deposit_status, name="get_deposit_status"),
+    url(r'^api/deposit/new', view=views.begin_deposit, name="begin_deposit"),
 ]
